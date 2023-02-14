@@ -1,0 +1,15 @@
+
+.MenuNavBar{
+    background-color:beige;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.TituloMenuNavBar{
+    color: white;
+}
+
+.IconosNavBar{
+    text-decoration: none;
+}
