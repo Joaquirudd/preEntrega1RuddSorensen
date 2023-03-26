@@ -1,5 +1,7 @@
 import React, {useState, useContext} from "react";
+//import ContactForm from "../components/ContactForm/ContactForm";
 export const CartContext = React.createContext([]);
+
 
 export const useCartContext = () => useContext(CartContext);
 
