@@ -7,10 +7,12 @@ import ItemCart from "../ItemCart/ItemCart";
 
 
 const Cart = () => {
-
     const { cart, totalPrice } = useCartContext();
-    const [form, setForm] = useState({items: cart.map(product => ({ id: product.id, title: product.title, price: product.price, quantity: product.quantity })),
-    total: totalPrice(),})
+
+    const [form, setForm] = useState({items: cart.map(product => ({ id: product.id, title: product.title, price: product.price, quantity: product.quantity })), total: totalPrice(),
+        name: "",
+        email: "",
+    })
 /*
     const order = {
         items: cart.map(product => ({ id: product.id, title: product.title, price: product.price, quantity: product.quantity })),
@@ -22,7 +24,7 @@ const Cart = () => {
 
         const db = getFirestore();
         const contactFormCollection = collection(db, "contactForm");
-        addDoc(contactFormCollection, form).then(({ snapshot }) => console.log(snapshot))
+        addDoc(contactFormCollection, form).then(({ id }) => console.log(id))
     }
 /*
     const handleClick = () => {
@@ -33,6 +35,8 @@ const Cart = () => {
     }
 */
     const changeHandler = (ev) => {
+        ev.preventDefault();
+
         const {name, value} = ev.target;
         setForm({...form, [name]: value});
     };

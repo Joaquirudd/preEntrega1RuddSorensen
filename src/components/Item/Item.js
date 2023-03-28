@@ -6,7 +6,6 @@ import { CartContext } from "../../contexts/CartContext";
 const ItemDetail = ({info}) => {
 
     const nombre = useContext(CartContext);
-    console.log("Item: ", nombre)
 
     return(
         <Link to={`/detalle/${info.id}`}>
