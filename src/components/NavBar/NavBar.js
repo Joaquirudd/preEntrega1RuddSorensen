@@ -21,7 +21,7 @@ const NavBar = () => {
                     <NavLink to="/comida/salado">Salado</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/carrito"><CartWidget/></NavLink>
+                    <NavLink to="/cart"><CartWidget/></NavLink>
                 </li>
             </ul>
           </nav>
